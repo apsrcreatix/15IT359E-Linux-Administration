@@ -1,4 +1,29 @@
-# LINUX ADMINISTRATION :ledger: 
+# LINUX ADMINISTRATION :ledger:
+- [LINUX ADMINISTRATION :ledger:](#linux-administration-ledger)
+    - [1.Managing :card_file_box: From Command line :wavy_dash:](#1managing-cardfilebox-from-command-line-wavydash)
+        - [1.1 Useful Basics](#11-useful-basics)
+        - [1.2 The Linux File System Hierarchy](#12-the-linux-file-system-hierarchy)
+            - [1. / – Root](#1--%E2%80%93-root)
+            - [2. /bin – User Binaries](#2-bin-%E2%80%93-user-binaries)
+            - [3. /sbin – System Binaries](#3-sbin-%E2%80%93-system-binaries)
+            - [4. /etc – Configuration Files](#4-etc-%E2%80%93-configuration-files)
+            - [5. /dev – Device Files](#5-dev-%E2%80%93-device-files)
+            - [6. /proc – Process Information](#6-proc-%E2%80%93-process-information)
+            - [7. /var – Variable Files](#7-var-%E2%80%93-variable-files)
+            - [8. /tmp – Temporary Files](#8-tmp-%E2%80%93-temporary-files)
+            - [9. /usr – User Programs](#9-usr-%E2%80%93-user-programs)
+            - [10. /home – Home Directories](#10-home-%E2%80%93-home-directories)
+            - [11. /boot – Boot Loader Files](#11-boot-%E2%80%93-boot-loader-files)
+            - [12. /lib – System Libraries](#12-lib-%E2%80%93-system-libraries)
+            - [13. /opt – Optional add-on Applications](#13-opt-%E2%80%93-optional-add-on-applications)
+            - [14. /mnt – Mount Directory](#14-mnt-%E2%80%93-mount-directory)
+            - [15. /media – Removable Media Devices](#15-media-%E2%80%93-removable-media-devices)
+            - [16. /srv – Service Data](#16-srv-%E2%80%93-service-data)
+        - [1.3 List of Useful Commands](#13-list-of-useful-commands)
+        - [1.4 Managing Linux file System Permissions](#14-managing-linux-file-system-permissions)
+            - [A) Basic Terms](#a-basic-terms)
+            - [B) Managing permissions from command line using `chmod` , `chown`](#b-managing-permissions-from-command-line-using-chmod--chown)
+    - [**Handy shortcuts for terminal**](#handy-shortcuts-for-terminal)
 
 ## 1.Managing :card_file_box: From Command line :wavy_dash:
 
@@ -7,15 +32,15 @@
 **User**
 
 ```bash
-apsrcreatix@ThinkPad-L430  ~ 
+apsrcreatix@ThinkPad-L430  ~
 ```
 
 **Super User**
 
 ```bash
 apsrcreatix@ThinkPad-L430  ~ sudo bash
-[sudo] password for apsrcreatix: 
-root@ThinkPad-L430:~# 
+[sudo] password for apsrcreatix:
+root@ThinkPad-L430:~#
 ```
 
 **Change the password**
@@ -121,7 +146,7 @@ Searching pattern in the history using *CTRL + r*
 - Contains server specific services related data.
 - For example, /srv/cvs contains CVS related data.
 
-### 1.3 List of Useful Commands 
+### 1.3 List of Useful Commands
 
 `ls [-a]|[-R]|[-l]|[-la]|[-laR]...[<foldername.>]`
 
@@ -141,13 +166,13 @@ Searching pattern in the history using *CTRL + r*
 
 ### 1.4 Managing Linux file System Permissions
 
-#### A) Basic Terms 
+#### A) Basic Terms
 
 - drwxrwxrwx : owner-group-others
 - d - directory
 - r - read
-- w - write 
-- x - execute 
+- w - write
+- x - execute
 - wx - delete create
 - drwx - everything
 
@@ -157,7 +182,7 @@ Searching pattern in the history using *CTRL + r*
 
 Who is u(user),g(group),o(other),a(all). What is +(add),-(remove),=(set exactly). Which is r,w,x.
 
-Example : go-rw for removing r,w permission from group and others. 
+Example : go-rw for removing r,w permission from group and others.
 
 - `chmod ### file|directory`
 
@@ -171,9 +196,9 @@ chown changes the ownership to other user from previous user.
 
 Example : chown visitor:guests foodie implies changing permissions or ownership of foodie to vistor and the group to guests.
 
-- **Command `umask`** without arguments will display current value of the shell's umask. 
+- **Command `umask`** without arguments will display current value of the shell's umask.
 
-## **Handy shortcuts for terminal** 
+## **Handy shortcuts for terminal**
 
 `Exit Session : CTRL + d`
 
@@ -184,10 +209,3 @@ Example : chown visitor:guests foodie implies changing permissions or ownership 
 `Clear towards beginning :  CTRL + u`
 
 `Clear towards end :  CTRL + k`
-
-
-
-
-
-
-
